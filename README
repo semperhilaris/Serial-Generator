@@ -1,1 +1,5 @@
-test
+A small Class to create a pool of serial keys.
+
+TODO:
+- User Interface
+- File Export

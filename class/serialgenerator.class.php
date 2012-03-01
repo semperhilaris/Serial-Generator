@@ -20,6 +20,9 @@ class Serialgenerator {
   public function set_part_len($len) {
     $this->part_len = intval($len);
   }
+  public function set_seperator($seperator) {
+    $this->seperator = $seperator;
+  }
   
   //GENERATOR FUNCTIONS
 
