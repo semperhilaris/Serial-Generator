@@ -12,7 +12,7 @@ class Serialgenerator {
   
   //SETTER FUNCTIONS
   public function set_pool($pool) {
-    $this->pool = $pool;
+    $this->pool = str_replace(' ', '', $pool);
   }
   public function set_part_count($count) {
     $this->part_count = intval($count);
@@ -28,7 +28,7 @@ class Serialgenerator {
 
   //generates one part of a serial
   private function generate_key_part() {
-    $countPool = strlen($this->pool) ;
+    $countPool = strlen($this->pool)-1;
     $serial = '' ;
     for ($i = 0 ; $i < $this->part_len ; $i++) {
         $currIndex = mt_rand(0, $countPool);
