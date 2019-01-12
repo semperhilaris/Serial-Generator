@@ -55,13 +55,13 @@ class Serialgenerator {
       
       while ($newcode == false) {
         $gen = $this->generate_key();
-	    if (!in_array($gen, $this->serials)) {
-	      $this->serials[] = $gen;
+	    if (!isset($this->serials[$gen])) {
+	      $this->serials[$gen] = true;
 	      $newcode = true;
 	    }
       }
 	}
-	return $this->serials;
+	return array_keys($this->serials);
   }
   
 
